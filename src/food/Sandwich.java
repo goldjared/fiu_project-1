@@ -20,6 +20,26 @@ public class Sandwich {
 // set the price of each conbination
 // see project document for prices
 // YOUR CODE HERE
+    if(isMeat() && isCheese() && isVeggies()) {
+      this.price = 7.99;
+    } else if(isMeat() && isCheese() && !isVeggies()) {
+      this.price = 7.59;
+    } else if(isMeat() && !isCheese() && isVeggies()) {
+      this.price = 7.09;
+    } else if(isMeat() && !isCheese() && !isVeggies()) {
+      this.price = 6.89;
+    } else if(!isMeat() && isCheese() && isVeggies()) {
+      this.price = 5.99;
+    } else if(!isMeat() && isCheese() && !isVeggies()) {
+      this.price = 5.59;
+    } else if(!isMeat() && !isCheese() && isVeggies()) {
+      this.price = 5.09;
+    } else if(!isMeat() && !isCheese() && !isVeggies()) {
+      this.price = 4.99;
+    }
+
+
+
     this.meat = meat;
     this.cheese = cheese;
     this.veggies = veggies;

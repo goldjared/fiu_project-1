@@ -1,7 +1,7 @@
 package transactions;
 public class Payment {
   private static final double DOLLARVALUE = 1.00;
-  private static final double QUATERVALUE = 0.25;
+  private static final double QUARTERVALUE = 0.25;
   private static final double DIMEVALUE = 0.10;
   private static final double NICKELVALUE = 0.05;
   private static final double PENNYVALUE = 0.01;
@@ -50,7 +50,7 @@ public class Payment {
   }
   public double paymentValue(){
     double total = numberOfOneDollarBills * DOLLARVALUE +
-            numberOfQuarters * QUATERVALUE +
+            numberOfQuarters * QUARTERVALUE +
             numberOfDimes * DIMEVALUE +
             numberOfNickels * NICKELVALUE +
             numberOfPennies * PENNYVALUE;
