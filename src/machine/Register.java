@@ -69,18 +69,20 @@ public class Register {
       System.out.println("==========================================");
       System.out.println("Register Cash Info");
       System.out.println("==========================================");
-      System.out.println("Access Level:\t\t Valid");
+      System.out.println("Access Level:\t\t\t Valid");
       System.out.printf("Cash in the Register:\t $%-15.2f\n", cashValue());
-      System.out.printf("Dollars:\t\t %-15d\n", numberOfOneDollarBills);
-      System.out.printf("Quarters:\t\t %-15d\n", numberOfQuarters);
-      System.out.printf("Dimes:\t\t\t %-15d\n", numberOfDimes);
-      System.out.printf("Nickels:\t\t %-15d\n", numberOfNickels);
-      System.out.printf("Pennies:\t\t %-15d\n", numberOfPennies);
+      System.out.printf("Dollars:\t\t\t\t %-15d\n", numberOfOneDollarBills);
+      System.out.printf("Quarters:\t\t\t\t %-15d\n", numberOfQuarters);
+      System.out.printf("Dimes:\t\t\t\t\t %-15d\n", numberOfDimes);
+      System.out.printf("Nickels:\t\t\t\t %-15d\n", numberOfNickels);
+      System.out.printf("Pennies:\t\t\t\t %-15d\n", numberOfPennies);
+
+
     } else {
       System.out.println("==========================================");
       System.out.println("Register Cash Info");
       System.out.println("==========================================");
-      System.out.println("Access Level:\t\t Not Valid by " + personal);
+      System.out.println("Access Level:\t\t\t Not Valid by " + personal);
       System.out.println("");
     }
 
@@ -90,35 +92,31 @@ public class Register {
     System.out.println("==========================================");
     System.out.println("Register Buy Apple");
     System.out.println("==========================================");
-    System.out.printf("Apple Price:\t\t $%-15.2f\n" , apple.price() );
-    System.out.printf("Payment:\t\t $%-15.2f\n" , payment.paymentValue() );
-// check if you have enough payment to buy the apple
-// if your payment is less the apple price calculate the amount short
-// and output to the console
-// Sorry but you do not have enough money to buy the Apple
-// hint code:
+    System.out.printf("Apple Price:\t\t\t $%-15.2f\n" , apple.price() );
+    System.out.printf("Payment:\t\t\t\t $%-15.2f\n" , payment.paymentValue() );
     if(payment.paymentValue() < apple.price()) {
       double shortAmount = apple.price() - payment.paymentValue();
-      System.out.printf("You need:\t\t $%-15.2f\n", shortAmount);
+      System.out.printf("You need:\t\t\t\t $%-15.2f\n", shortAmount);
       System.out.println("");
       System.out.println("Sorry but you do not have enough money to buy the Apple");
       System.out.println("==========================================");
-      System.out.println("\n");
+//      System.out.println("\n");
     } else if(payment.paymentValue() > apple.price()){
       giveChange(apple.price(), payment);
     }
+    System.out.println();
 
   }//end buyApple()
   public void buySandwich(Sandwich sandwich, Payment payment){
     System.out.println("==========================================");
     System.out.println("Register Buy Sandwich");
     System.out.println("==========================================");
-    System.out.printf("Sandwich Price:\t\t $%-15.2f\n" , sandwich.getPrice() );
-    System.out.printf("Payment:\t\t $%-15.2f\n" , payment.paymentValue() );
+    System.out.printf("Sandwich Price:\t\t\t $%-15.2f\n" , sandwich.getPrice() );
+    System.out.printf("Payment:\t\t\t\t $%-15.2f\n" , payment.paymentValue() );
 
     if(payment.paymentValue() < sandwich.getPrice()) {
       double shortAmount = sandwich.getPrice() - payment.paymentValue();
-      System.out.printf("You need:\t\t $%-15.2f\n", shortAmount);
+      System.out.printf("You need:\t\t\t\t $%-15.2f\n", shortAmount);
       System.out.println("");
       System.out.println("Sorry but you do not have enough money to buy the Sandwich");
       System.out.println("==========================================");
@@ -126,6 +124,7 @@ public class Register {
     } else if(payment.paymentValue() > sandwich.getPrice()){
       giveChange(sandwich.getPrice(), payment);
     }
+    System.out.println();
 
   }//end buySandwich()
 private void giveChange(double price, Payment payment){
@@ -143,7 +142,7 @@ private void giveChange(double price, Payment payment){
 // rounded to whole number so you can use the % operator for the change
 // example 9.65 becomes 965
         int neededChangeWhole = (int)Math.round(neededChange * 100);
-        System.out.printf("Change:\t\t $%-15.2f\n", neededChange);
+        System.out.printf("Change:\t\t\t\t\t $%-15.2f\n", neededChange);
 // figure out the dollar to give back
 // hint: 965 /100 = 9 because of the int/ int
 // so you have 9 dollars
@@ -169,38 +168,11 @@ private void giveChange(double price, Payment payment){
   numberOfNickels -= changeNickels;
   numberOfDimes -= changeDimes;
 
-  System.out.printf("Dollars:\t\t %-15d\n", changeDollars);
-  System.out.printf("Quarters:\t\t %-15d\n", changeQuarters);
-  System.out.printf("Dimes:\t\t %-15d\n", changeDimes);
-  System.out.printf("Nickels:\t\t %-15d\n", changeNickels);
-  System.out.printf("Pennies:\t\t %-15d\n", changePennies);
-// update the remaining change to give back
-// 965 – 900 = 65 this is the cents you need to give back
-// figure out the quarters to give back
-// YOUR CODE HERE
-// update the remaining change to give back
-// YOUR CODE HERE
-// figure out the dimes to give back
-// YOUR CODE HERE
-// update the remaining change to give back
-// YOUR CODE HERE
-// figure out the nickels to give back
-// YOUR CODE HERE
-// update the remaining change to give back
-// YOUR CODE HERE
-// figure out the pennies to give back
-// YOUR CODE HERE
-// give the change back
-// remove the dollars, quarters, dimes, nickels, pennies
-// from the register
-// Hint code:
-// numberOfOneDollarBills -= changeDollars;
-// YOUR CODE HERE
-// output to the console the change:
-// dollars, quarters, dimes, nickels, pennies
-// Hint code:
-// System.out.printf("Dollars:\t\t %-15d\n", changeDollars);
-// System.out.printf("Quaters:\t\t %-15d\n", changeQuaters);
-// YOUR CODE HERE
+  System.out.printf("Dollars:\t\t\t\t %-15d\n", changeDollars);
+  System.out.printf("Quarters:\t\t\t\t %-15d\n", changeQuarters);
+  System.out.printf("Dimes:\t\t\t\t\t %-15d\n", changeDimes);
+  System.out.printf("Nickels:\t\t\t\t %-15d\n", changeNickels);
+  System.out.printf("Pennies:\t\t\t\t %-15d\n", changePennies);
+
         }
         }//end class

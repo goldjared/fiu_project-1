@@ -52,7 +52,6 @@ public class Controller {
 
     register.cashInfo("Manager");
 
-    //---------------------------------------------------step 10? idk
     Sandwich sandwich = new Sandwich(true, true, true);
     sandwich.displayInfo();
     Payment sandwichPayment1 = new Payment(5,2,1,1,2);
@@ -60,7 +59,30 @@ public class Controller {
     register.buySandwich(sandwich, sandwichPayment1);
     register.cashInfo("Manager");
 
-    
+    // create booleans
+    boolean meat = true;
+    boolean cheese = true;
+    boolean veggies = true;
+    System.out.println("");
 
+    for(int i = 1; i<=8; i++) {
+      meat = i <= 4;
+      cheese = i <= 2 || i >= 5 && i < 7;
+      veggies = i % 2 != 0;
+      System.out.println();
+      System.out.println("===========================================================");
+      System.out.println("===========================================================");
+      Sandwich s = new Sandwich(meat, cheese, veggies);
+      s.displayInfo();
+      Payment sPaymentLoop = new Payment(10,0,0,0,0);
+      sPaymentLoop.displayInfo();
+      register.buySandwich(s, sPaymentLoop);
+      register.cashInfo("Manager");
+      System.out.println();
+
+      System.out.println("===========================================================");
+      System.out.println("===========================================================");
+
+    }
   }
 }

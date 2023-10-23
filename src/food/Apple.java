@@ -45,9 +45,11 @@ public class Apple {
     System.out.println("==========================================");
     System.out.println("Apple Info");
     System.out.println("==========================================");
-    System.out.printf("Type:\t\t\t %-15s\n", type);
-    System.out.printf("Weight:\t\t\t %-6.4f lbs\n", weight);
-    System.out.printf("Price Pre Unit:\t\t %-10.2f\n", pricePreUnitWeight);
+    System.out.printf("Type:\t\t\t\t\t %-15s\n", type);
+    System.out.printf("Weight:\t\t\t\t\t %-6.4f lbs\n", weight);
+    System.out.printf("Price Pre Unit:\t\t\t %-10.2f\n", pricePreUnitWeight);
+    System.out.printf("Price:\t\t\t\t\t $%-10.2f\n", price());
+    System.out.println();
   }
 
 

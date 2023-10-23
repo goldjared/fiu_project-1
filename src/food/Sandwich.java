@@ -1,5 +1,7 @@
 package food;
 
+import java.sql.SQLOutput;
+
 public class Sandwich {
   //----------------------------------------------------------
 // Instant variables
@@ -19,6 +21,10 @@ public class Sandwich {
 // if else for all combinations of the sandwichs
 // set the price of each conbination
 // see project document for prices
+    setMeat(meat);
+    setCheese(cheese);
+    setVeggies(veggies);
+
 // YOUR CODE HERE
     if(isMeat() && isCheese() && isVeggies()) {
       this.price = 7.99;
@@ -88,8 +94,12 @@ public class Sandwich {
     System.out.println("==========================================");
     System.out.println("Sandwich Info");
     System.out.println("==========================================");
-    System.out.printf("Bread:\t\t\t %-15s\n", bread);
-    System.out.printf("Meat:\t\t\t %-15b \n", meat);
+    System.out.printf("Bread:\t\t\t\t\t %-15s\n", bread);
+    System.out.printf("Meat:\t\t\t\t\t %-15b \n", meat);
+    System.out.printf("Cheese:\t\t\t\t\t %-15b \n", cheese);
+    System.out.printf("Veggies:\t\t\t\t %-15b \n", veggies);
+    System.out.printf("Price:\t\t\t\t\t $%-15.2f \n", getPrice());
+    System.out.println();
   }
 
 

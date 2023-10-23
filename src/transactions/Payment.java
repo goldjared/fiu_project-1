@@ -40,12 +40,12 @@ public class Payment {
     System.out.println("==========================================");
     System.out.println("Payment Info");
     System.out.println("==========================================");
-    System.out.printf("Number of Dollar:\t %-15d\n", numberOfOneDollarBills);
-    System.out.printf("Number of Quarters:\t %-15d \n", numberOfQuarters);
-    System.out.printf("Number of Dimes:\t %-15d\n", numberOfDimes);
-    System.out.printf("Number of Nickels:\t %-15d\n", numberOfNickels );
-    System.out.printf("Number of Pennies:\t %-15d\n", numberOfPennies );
-    System.out.printf("Total Payment:\t\t $%-15.2f\n", paymentValue() );
+    System.out.printf("Number of Dollar:\t\t %-15d\n", numberOfOneDollarBills);
+    System.out.printf("Number of Quarters:\t\t %-15d \n", numberOfQuarters);
+    System.out.printf("Number of Dimes:\t\t %-15d\n", numberOfDimes);
+    System.out.printf("Number of Nickels:\t\t %-15d\n", numberOfNickels );
+    System.out.printf("Number of Pennies:\t\t %-15d\n", numberOfPennies );
+    System.out.printf("Total Payment:\t\t\t $%-15.2f\n", paymentValue() );
     System.out.println("");
   }
   public double paymentValue(){
